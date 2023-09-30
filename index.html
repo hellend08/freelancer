@@ -30,7 +30,7 @@
             <h1>Start Bootstrap</h1>
             <div class="line-start">
                 <hr>
-                icon
+                <i class="fa-solid fa-star" style="color: #ffffff;"></i>
                 <hr>
             </div>
             <h6>Web Developer - Graphic Artist - User Experience Designer</h6>
@@ -39,7 +39,7 @@
             <h3>Portfolio</h3>
             <div class="line-start">
                 <hr>
-                icon
+                <i class="fa-solid fa-star" style="color: #000000;"></i>
                 <hr>
             </div>
             <picture>
@@ -53,33 +53,45 @@
         </section>
         <section id="about">
             <h3>About</h3>
-            <div>
+            <div class="line-start">
+                <hr>
+                <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                <hr>
+            </div>
+            <div class="text">
                 <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete
                     source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy
                     customization.</p>
                 <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or
                     a graphic artist looking to share your projects, this template is the perfect starting point!</p>
             </div>
-            <button>Download Theme</button>
+            <button>
+                <i class="fa-sharp fa-solid fa-download" style="color: #ffffff;"></i>
+                Download Theme</button>
         </section>
         <section id="contact">
             <h3>Contact Me</h3>
-            <form action="">
+            <div class="line-start">
+                <hr>
+                <i class="fa-solid fa-star" style="color: #000000;"></i>
+                <hr>
+            </div>
+            <form action="#" method="" autocomplete="off">
                 <fieldset>
-                    <label for="">Name</label>
-                    <input type="text">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
 
-                    <label for="">Email Address</label>
-                    <input type="text">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email">
 
-                    <label for="">Phone Number</label>
-                    <input type="text">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
 
-                    <label for="">Message</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label for="text">Message</label>
+                    <textarea name="text" id="text" cols="30" rows="10"></textarea>
 
                 </fieldset>
-                <button>Send</button>
+                <button type="submit">Send</button>
 
             </form>
         </section>
@@ -89,18 +101,38 @@
         <section>
             <article>
                 <h4>Location</h4>
-                <p>3481 Melrose Place Beverly Hills, CA 90210
+                <p>3481 Melrose Place <br> Beverly Hills, CA 90210
                 <p>
             </article>
             <article>
                 <h4>Around the web</h4>
                 <div class="icons">
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="fa-brands fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="fa-solid fa-basketball"></i>
+                            </a>
+                        </li>
                     </ul>
 
                 </div>
@@ -110,9 +142,11 @@
                 <p>Freelancer is a free to use, open source Bootstrap theme created by <span>Start Bootstrap</span>.</p>
             </article>
         </section>
-        <p>Copyright Helen Vásquez 2023</p>
+        <p>Copyright
+            <i class="fa-sharp fa-regular fa-copyright"></i>
+             Helen Vásquez 2023</p>
     </footer>
-
+    <script src="https://kit.fontawesome.com/e7dc674075.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

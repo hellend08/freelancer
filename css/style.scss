@@ -1,3 +1,12 @@
+@mixin section-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 6rem 0;
+    // justify-content: center;
+}
+
 @mixin line-start {
     div.line-start {
         display: flex;
@@ -16,10 +25,10 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    /* font-family: 'Lato', sans-serif; */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -37,6 +46,8 @@ header {
     height: 70px;
     justify-content: space-around;
     padding: 1rem;
+    position: sticky;
+    top: 0;
 
     nav ul {
         display: flex;
@@ -61,56 +72,39 @@ header {
 section.home {
     background-color: #18bc9c;
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 1rem;
+
+    @include section-container;
+    @include line-start;
 
     img {
         width: 200px;
+        padding-top: 1rem;
     }
 
     h1 {
         font-size: 50px;
     }
 
-    @include line-start;
-
-    // .line-start {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     gap: 5px;
-
-    //     hr {
-    //         width: 50px;
-    //         border: 1.5px solid;
-    //     }
-    // }
-
     h6 {
         font-size: 16px;
+        padding-top: .5rem
     }
 }
 
 #portfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    @include section-container;
+    @include line-start;
 
     h3 {
         font-size: 32px;
     }
 
-    @include line-start;
-
     picture {
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(3, 2fr);
+        margin: .5rem 0;
 
         img {
             width: 250px;
@@ -119,16 +113,158 @@ section.home {
 }
 
 #about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #18bc9c;
+    color: #FFFFFF;
+
+    @include section-container;
+    @include line-start;
 
     h3 {
         font-size: 32px;
     }
 
-    div {
+    div.text {
         display: grid;
         grid-template-columns: repeat(4, 2fr);
+        gap: 25px;
+        margin: .5rem 0;
+
+        p {
+            font-size: 14px;
+            font-family: 'Lato', sans-serif;
+
+            &:first-child {
+                grid-column: 2 / 3;
+            }
+        }
+    }
+
+    button {
+        background-color: #18bc9c;
+        border: 1.5px solid #FFFFFF;
+        border-radius: 3px;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-weight: 600;
+        padding: .5rem 1rem;
+        margin-top: 1rem;
+    }
+}
+
+#contact {
+
+    @include section-container;
+    @include line-start;
+
+    h3 {
+        font-size: 32px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+
+        fieldset {
+            border: none;
+            color: #8a8a8a;
+            display: flex;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            flex-direction: column;
+            gap: 10px;
+            width: 600px;
+
+            input, textarea {
+                border: none;
+                border-bottom: 1.5px solid #c9c8c8;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+
+        button {
+            background-color: #18bc9c;
+            border: none;
+            border-radius: 5px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-weight: 700;
+            padding: .5rem .7rem;
+        }
+    }
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #FFFFFF;
+    padding: 2rem 0 1rem;
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        padding-bottom: 4.5rem;
+
+        article {
+            display: grid;
+            justify-items: center;
+            grid-column: 5 / 9;
+            
+            &:first-child {
+                grid-column: 3 / 5;
+            }
+
+            &:last-child {
+                grid-column: 9 / 11;
+            }
+
+            ul {
+                display: flex;
+                gap: 5px;
+
+                li {
+                    list-style: none;
+                    border: 2px solid #FFFFFF;
+                    border-radius: 50%;
+                    padding: .4rem .6rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:first-child {
+                        padding: .5rem .8rem;
+                    }
+
+                    a {
+
+                        i {
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+
+            h4 {
+                font-size: 20px;
+                padding-bottom: 1.2rem;
+            }
+
+            p {
+                span {
+                    color: #18bc9c;
+                }
+            }
+        }
+    }
+
+    p {
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+
     }
 }
